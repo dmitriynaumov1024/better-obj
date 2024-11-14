@@ -9,6 +9,7 @@ export { constraint, fk, pk, cascade,
 } from "./constraint.js"
 export { belongsToOne, hasOne, hasMany } from "./relation.js"
 export { Model } from "./model.js"
+export { ModelCache } from "./modelcache.js"
 export { DbAdapter, createDbAdapter } from "./database.js"
 export { 
     paginate, count, hash, randomHash, 
