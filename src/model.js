@@ -6,7 +6,7 @@ import { type } from "./datatype.js"
 
 import { Model as ObjectionModel } from "objection"
 
-class Model extends ObjectionModel
+export class Model extends ObjectionModel
 {
     // convenient constructor
     constructor (options) {
@@ -48,10 +48,10 @@ class Model extends ObjectionModel
             return item[this._idcolumn[0]]
         }
         else if (this.idColumn.length == 2) {
-            return item[this._idcolumn[0]] + "\n" + item[this._idcolumn[1]]
+            return item[this._idcolumn[0]] + ";" + item[this._idcolumn[1]]
         }
         else {
-            return this._idcolumn.map(key=> item[key]).join("")
+            return this._idcolumn.map(key=> item[key]).join(";")
         }
     }
 
@@ -297,7 +297,3 @@ Class * extends Model
 }
 
 */
-
-export {
-    Model
-}
