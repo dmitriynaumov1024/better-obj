@@ -174,7 +174,7 @@ export class Model extends ObjectionModel
         }
         else if (options.type == type.Integer) {
             if (options.rule.increment) col = table.increments(name, options.rule)
-            else col = table.integer(name)
+            else col = table.bigint(name)
         }
         else if (options.type == type.Float) {
             col = table.float(name)
